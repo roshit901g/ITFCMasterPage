@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="WebPartPageExpansion" content="full" />
+  <title>ITFC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="Stylesheet" type="text/css" href="./itfcCSS.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+    
+  </style>
+
+</head>
+
+<body>
+  <div class="topline"></div>
+  <div class="navbar navbar-inverse">
+    <div class="row container-fluid">
+      
+      
+
+
+      <div class="navbar-header col-lg" >
+        <button id="sidecollapse" class=" collapsebtn navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation" onclick="sidecollapsefn()">
+          <!-- <i class="fa fa-bars"></i> -->
+          <img class="navicon" src="./icons/menu.svg">
+        </button>
+        <a class="navbar-brand" href="#"><div id=Mainlogo><img src="./ITFC-Logo@2x.png" style="width: 100%; height: 100%;"></div></a>
+      </div>
+      
+      <div class="col-lg navbar-cards ">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button id="navcollapse" class=" collapsebtn navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <i class="fa fa-bars"></i> -->
+              <img class="navicon" src="./icons/grid.svg" style="padding-top: 10px; margin-right: -9px;">
+            </button>
+          </li>
+          <li>
+            <div id="dwork" class="digwork-active" onclick="toggleactive()">
+              <center>Digital WorkSpace</center>
+            </div>
+          </li>
+          <li id="navsearch" style="display: none;"><div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon" onclick="dispsearchicn()" src="icons/search.svg">
+          </div></li>
+          <li id="navsearchicn"><a href="#"><img class="navicon" onclick="dispsearch()" src="icons/search.svg"></a></li>
+          <li onclick="displaynotif()"><a href="#"><img class="navicon" src="icons/bell.svg"></a>
+
+            <div id="notif" class="card notifcard arrow-top" style="display: none;">
+              <div class="row">
+                <div class="col-lg-8 notif-header">
+                  Notifications
+                  
+                </div>
+                <div class="col-lg-3 notif-usericn">
+                  <div style="background-color: blueviolet;
+                                            border-radius: 50px;
+                                            width: 34px !important;
+                                            height: 34px;
+                                            margin: 18%;
+                                            margin-left: 63px;"></div>
+                </div>
+            
+            
+              </div>
+              <hr style="margin-left: 20px; margin-right: 20px; margin-top: 0px; margin-bottom: 0px;">
+              <!-- one message -->
+              <div>
+              <div class="row notif-msg ">
+                <div class="col-lg-1 notif-icn1" ><img src="./iconwhite/calendar.svg"> 
+                </div>
+                <div class="col-lg-8 msgtxt">Leave request form Mohamed Elyas is pending for approval</div>
+                <div class="col-lg-2" style="float: right; padding-right: 0px;padding-left: 0px; width: 21%;">
+                  <div class="msgdate">July 13, 2020</div>
+                  <div class="msgtime">3:00 PM</div>
+                </div>
+              </div>
+              <hr style="margin-left: 20px; margin-right: 20px; margin-top: 17px; margin-bottom: 0px;">
+              </div>
+              <!-- one message end -->
+              <div>
+                <div class="row notif-msg">
+                  <div class="col-lg-1 notif-icn2"><img src="iconwhite/inbox.svg">
+                  </div>
+                  <div class="col-lg-8 msgtxt">Leave request form Mohamed Elyas is pending for approval</div>
+                  <div class="col-lg-2" style="float: right; padding-right: 0px;padding-left: 0px; width: 21%;">
+                    <div class="msgdate">July 13, 2020</div>
+                    <div class="msgtime">3:00 PM</div>
+                  </div>
+                </div>
+                <hr style="margin-left: 20px; margin-right: 20px; margin-top: 17px; margin-bottom: 0px;">
+              </div>
+              
+                    
+
+              <div class="notif-container">
+                
+                <div class="row"><center><a>view all</a></center></div>
+                <!-- <h4><b>John Doe</b></h4>
+                                  <p>Architect & Engineer</p> -->
+              </div>
+            </div>
+          
+          </li>
+          <li onclick="displayinfo()"><a href="#"><img class="userimg" src="./User-profile-pic@2x.png"
+                class="rounded-circle " alt="avatar image">
+            </a>
+          
+            <div id="inf" class="card profilecard arrow-top1" style="display: none;">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="profilecircle"></div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="username">Abdhul ansar</div>
+                  <div class="userdesig">Sharepoint developer</div>
+                </div>
+
+              </div>
+              <div class="profile-container">
+                <hr class="notifhr">
+                <div class="username-sub"><div><span><i class="material-icons" style="color:#AD7882">assignment_ind</i></span>abdhulansar@itfc-idb.org<span></span></div></div>
+                <hr class="notifhr">
+                <div class="username-sub" ><img class="profileicons" src="./iconwhite/bar-chart-2.svg" >D&OE</div>
+                <hr class="notifhr">
+                <div class="username-sub"><img class="profileicons" src="./iconwhite/settings.svg" style="padding: 4px;">User Settings</div>
+                <hr class="notifhr">
+                <div class=""><center><button class="btn-signoff">Sign off</button></center></div>
+                <!-- <h4><b>John Doe</b></h4>
+                      <p>Architect & Engineer</p> -->
+              </div>
+            </div>
+          
+          </li>
+        </ul>
+      </div>
+      <div class= "col-lg navbar-collapse collapse " id="navbarSupportedContent">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+        
+      
+      </ul>
+      </div>
+       
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <div class="row ">
+      <div class="col-lg-1 sidenav navbar-collapse collapse " id="navbarSupportedContent1" style="width:120px; height: 900px; ">
+        <ul style="list-style-type:none; text-align:left; padding: 0px;">
+          <li id="l1"><a href="#">
+              <center>
+                <div class="iconcontainer" id="side-icon1" > <img id="icon1" class="iconimg" src="icons/command.svg"> </div>
+              Dashboard
+              </center>
+            </a></li>
+          <li id="l2" onclick="dispES()"><a href="#">
+              <center>
+                <div class="iconcontainer" id="side-icon2" ><img id="icon2" class="iconimg esClass" src="icons/file-text.svg"> </div>
+                eServices
+              </center>
+            </a>
+
+              <div class="col-lg-2" id="eservices_submenu">
+              
+                <div class="sidenav-search"> <input type=text class="inputsearch" placeholder="Search"> <i class="fa fa-search "
+                    style="color: rgb(172,172,172);"></i>
+                </div>
+                <ul style="list-style-type:none; text-align:left; padding: 0px;">
+                  <li>
+              
+                    Document Capture
+              
+                  </li>
+                  <li>
+              
+                    Communication Workflow
+              
+                  </li>
+                  <li>
+              
+                    RightFax
+              
+                  </li>
+                  <li>
+              
+                    Digital Contract
+              
+                  </li>
+                  <li>
+              
+                    Digital Contract
+              
+                  </li>
+                  <li>
+              
+                    Procurement Request
+              
+                  </li>
+                </ul>
+              </div>
+            
+          </li>
+          <li id="l3"><a href="#">
+              <center>
+                <div class="iconcontainer" id="side-icon3"> <img id="icon3" class="iconimg" src="icons/archive.svg" style="color: red;"> </div>
+                Correspondance
+              </center>
+            </a></li>
+          <li id="l4"><a href="#">
+              <center>
+                <div class="iconcontainer" id="side-icon4"> <img id="icon4" class="iconimg" src="icons/check-square.svg"> </div>Tasks
+              </center>
+            </a></li>
+          <li id="l5"><a href="#">
+              <center>
+                <div class="iconcontainer" id="side-icon5"> <img id="icon5" class="iconimg" src="icons/layout.svg"> </div>
+                Templates
+              </center>
+            </a></li>
+          <li id="l6"><a href="#">
+              <center>
+                <div class="iconcontainer" id="side-icon6"> <img id="icon6" class="iconimg" src="icons/folder.svg"> </div>
+                Documents
+              </center>
+            </a></li>
+
+        </ul>
+
+
+      </div>
+      <div class="col-lg-11 text-left content" style="position: inherit;">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiulgod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum consectetur adipiscing elit, sed do eiulgod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+        <h3>Test</h3>
+        <p>Lorem ipsum...</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <footer class="container-fluid text-center" style="padding-bottom: 0px; display: block;">
+    <div class="row">
+      <div class="col-lg-3 fcol " style="margin-left: 130px; width: 22%;">
+
+        <ul style="list-style-type:none; text-align:left;">
+          <h4 class=footerHeadings>ITFC - IsDB Group</h4>
+          <li>P.O. Box 55335, Jeddah 21534 Kingdom of Saudi Arabia</li>
+          <li>Tel: +966 12 646 8364</li>
+          <li>Fax: +966 12 637 1064</li>
+          <li><img class="iconbrand" src="iconwhite/facebook (1).svg" ><img src="iconwhite/twitter (2).svg"   class="iconbrand"><img src="iconwhite/linkedin (2).svg"   class="iconbrand"><img src="iconwhite/youtube (2).svg"   class="iconbrand"></li>
+
+        </ul>
+      </div>
+      <div class="col-lg-3 fcol" style="width: 22%;">
+
+        <ul style="list-style-type:none; text-align:left;">
+          <h4  class=footerHeadings>Quick Links</h4>
+          <li>About</li>
+          <li>Articles of Agreement</li>
+          <li>Community</li>
+          <li>Privacy Policy</li>
+        </ul>
+
+
+      </div>
+      <div class="col-lg-3 fcol" style="width: 22%;">
+
+        <ul style="list-style-type:none; text-align:left;">
+          <h4  class=footerHeadings>Other Resources</h4>
+          <li>News</li>
+          <li>Press Office</li>
+          <li>Resources</li>
+        </ul>
+
+
+      </div>
+      <div class="col-lg-3 fcol" style="width: 22%;">
+
+        <ul style="list-style-type:none; text-align:left;">
+          <h4 class=footerHeadings>Trade Promotion</h4>
+          <li>Trade Finance at a Glance</li>
+          <li>Products & Services</li>
+          <li>Case Studies</li>
+        </ul>
+
+
+      </div>
+    </div>
+
+    <div class="row footer1">
+      <h6>© 2020 Developed By Resemble Systems. All rights reserved.</h6>
+    </div>
+  </footer>
+
+</body>
+<script type="text/javascript">
+  
+  function dispES(){
+
+  $('#eservices_submenu').show();
+  // $('#esvs').css({" background-color":"rgb(166, 87, 130)", "color":" white"}  )
+    // $("#icon2").attr("src", "iconwhite/file-text (2).svg");
+    // $("#side-icon2").css("padding-top", "24px");
+    // $("#side-icon2").addClass("bgmain");
+
+
+  }
+     $(document).mouseup(function (e) {
+        if ($(e.target).closest("#eservices_submenu").length
+          === 0) {
+          $("#eservices_submenu").hide();
+          $("#icon2").attr("src", "icons/file-text.svg");
+          $("#side-icon2").css("padding-top", "37px");
+          $("#side-icon2").removeClass("bgmain");
+           
+        }
+      }); 
+
+      function displayinfo(){
+        $('#inf').show();
+      }
+
+      $(document).mouseup(function (e) {
+          if ($(e.target).closest("#inf").length
+            === 0) {
+            $("#inf").hide();
+          }
+        }); 
+
+      function displaynotif(){
+         $('#notif').show();
+      }
+
+      $(document).mouseup(function (e) {
+          if ($(e.target).closest("#notif").length
+            === 0) {
+            $("#notif").hide();
+          }
+        });
+
+      function dispsearch(){
+
+        $("#navsearch").show();
+        $("#navsearchicn").hide();
+      }
+
+      function dispsearchicn() {
+
+          $("#navsearch").hide();
+          $("#navsearchicn").show();
+        }
+
+      
+
+     
+
+      $("#l1").hover(function () {
+        $("#icon1").attr("src", "iconwhite/command (1).svg");
+        $("#side-icon1").css("padding-top", "24px");
+        $("#side-icon1").addClass("bg-main");
+        },
+          function () {
+             $("#icon1").attr("src", "icons/command.svg");
+             $("#side-icon1").css("padding-top", "37px"); 
+             $("#side-icon1").removeClass("bg-main");         
+        }); 
+
+      $("#l2").hover(function () {
+          $(".esClass").attr("src", "iconwhite/file-text (2).svg");
+          $("#side-icon2").css("padding-top", "24px");
+           $("#side-icon2").addClass("bg-main");
+        },
+          function () {
+            $(".esClass").attr("src", "icons/file-text.svg");
+            $("#side-icon2").css("padding-top", "37px");
+            $("#side-icon2").removeClass("bg-main");
+            
+          }); 
+
+      $("#l3").hover(function () {
+          $("#icon3").attr("src", "iconwhite/archive (1).svg");
+          $("#side-icon3").css("padding-top", "24px");
+           $("#side-icon3").addClass("bg-main");
+        },
+          function () {
+            $("#icon3").attr("src", "icons/archive.svg");
+            $("#side-icon3").css("padding-top", "37px");
+            $("#side-icon3").removeClass("bg-main")
+          }); 
+
+      $("#l4").hover(function () {
+          $("#icon4").attr("src", "iconwhite/check-square (1).svg");
+          $("#side-icon4").css("padding-top", "24px");
+           $("#side-icon4").addClass("bg-main");
+        },
+          function () {
+            $("#icon4").attr("src", "icons/check-square.svg");
+            $("#side-icon4").css("padding-top", "37px");
+            $("#side-icon4").removeClass("bg-main")
+          }); 
+
+      $("#l5").hover(function () {
+          $("#icon5").attr("src", "iconwhite/layout (1).svg");
+          $("#side-icon5").css("padding-top", "24px");
+           $("#side-icon5").addClass("bg-main");
+        },
+          function () {
+            $("#icon5").attr("src", "icons/layout.svg");
+            $("#side-icon5").css("padding-top", "37px");
+            $("#side-icon5").removeClass("bg-main")
+          }); 
+
+      $("#l6").hover(function () {
+          $("#icon6").attr("src", "iconwhite/folder (1).svg");
+          $("#side-icon6").css("padding-top", "24px");
+          $("#side-icon6").addClass("bg-main");
+        },
+          function () {
+            $("#icon6").attr("src", "icons/folder.svg");
+            $("#side-icon6").css("padding-top", "37px");
+            $("#side-icon6").removeClass("bg-main")
+          }); 
+
+      function toggleactive(){
+        $("#dwork").toggleClass("digwork");
+      }
+
+
+      function sidecollapsefn(){
+        $(".content").toggleClass("contentfloat");
+      }
+</script>
+
+</html>
