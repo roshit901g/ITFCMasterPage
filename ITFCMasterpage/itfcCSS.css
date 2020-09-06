@@ -2,14 +2,15 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 
 .navbar {
-  height: 142px;
+  /* height: 142px; original */
+  height: 100px;
   margin-bottom: 0;
   border-radius: 0;
   background-color: rgb(245, 245, 245);
   border-color: rgb(245, 245, 245);
-  padding: 30px;
-  padding-left: 30px;
-  padding-top: 40px;
+  padding: 23px;
+  /* padding-left: 30px;
+  padding-top: 40px; */
   box-shadow: 0px 3px 4px #00000029;
 }
 
@@ -77,27 +78,31 @@ footer > div > div > ul > li {
   margin-top: -36px;
   margin-bottom: -33px;
   border-radius: 50%;
-  height: 76px;
+  /* height: 76px; */
+  height: 65px;
 }
 
 #Mainlogo {
-  margin-top: -33px;
+  /* margin-top: -35px;
 
   width: 100px;
-  height: 97px;
+  height: 97px; */
+  margin-top: -31px;
+  width: 85px;
+  height: 85px;
 }
 
 .digwork-active {
   color: white;
   background-color: rgb(166, 87, 130);
   padding: 13px;
-  margin: 11px;
-  margin-top: 0px;
+  /* margin: 11px;
+  margin-top: 0px; */
   border-radius: 28px;
   width: 199px;
   height: 51px;
   min-width: fit-content;
-  font-size: 18px;
+  font-size: 1.7rem;
   text-align: center;
   margin-left: 27px;
 }
@@ -107,13 +112,13 @@ footer > div > div > ul > li {
   border: solid rgb(166, 87, 130);
   background-color: white !important;
   padding: 11px;
-  margin: 11px;
-  margin-top: 0px;
+  /* margin: 11px;
+  margin-top: 0px; */
   border-radius: 28px;
   width: 199px;
   height: 51px;
   min-width: fit-content;
-  font-size: 18px;
+  font-size: 1.7rem;
   text-align: center;
   margin-left: 27px;
 }
@@ -132,7 +137,7 @@ footer > div > div > ul > li {
 
 .navbar-inverse .navbar-nav > li > a {
   color: black;
-  font-size: 18px;
+  font-size: 1.7rem;
   font-family: "Source Sans Pro" !important;
   font-weight: bold;
   padding-right: 17px !important;
@@ -145,8 +150,10 @@ footer > div > div > ul > li {
 
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:focus,
-.navbar-inverse .navbar-nav > .open > a:hover {
-  color: rgb(166, 87, 130);
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:visited,
+.navbar-inverse .navbar-nav > .open > a:active {
+  color: rgb(166, 87, 130) !important;
   background-color: rgb(245, 245, 245);
 }
 
@@ -241,7 +248,7 @@ footer > div > div > ul > li {
 }
 
 .topline {
-  height: 10px;
+  height: 9px;
   background: transparent
     linear-gradient(
       90deg,
@@ -261,10 +268,10 @@ footer > div > div > ul > li {
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sidenav {
     height: auto;
-    padding: 15px;
+    padding: 15px !important;
   }
 
   .row.content {
@@ -295,12 +302,13 @@ footer > div > div > ul > li {
   }
   .navbar {
     height: 106px;
+    padding: 40px;
     padding-left: 0px;
     padding-right: 0px;
   }
   #Mainlogo {
     margin-top: -64px;
-    margin-left: 58px;
+    margin-left: 42px;
     height: 71px;
     width: 73px;
   }
@@ -352,6 +360,7 @@ footer > div > div > ul > li {
   .content {
     /* float: right; */
     width: 100%;
+    height: fit-content;
   }
   #eservices_submenu {
     top: 112px !important;
@@ -360,7 +369,8 @@ footer > div > div > ul > li {
   #navbarSupportedContent {
     border: none;
     background: whitesmoke;
-    width: 200px;
+    width: 100%;
+    padding-left: 50px;
   }
   .footer1 {
     margin-right: -15px !important;
@@ -412,7 +422,7 @@ footer > div > div > ul > li {
 
 .contentfloat {
   float: right;
-  width: 78%;
+  width: 81%;
 }
 
 .card {
@@ -453,7 +463,7 @@ footer > div > div > ul > li {
 }
 .notifcard {
   max-height: 540px;
-  width: 532px;
+  width: 406px;
   right: -65px;
   top: 65px;
   border-radius: 7px;
@@ -465,8 +475,8 @@ footer > div > div > ul > li {
 
 .notif-container {
   padding: 2px 16px;
-  width: 532px;
-  padding-left: 34px;
+  width: -webkit-fill-available;
+  /* padding-left: 34px; */
   padding-bottom: 10px;
 }
 .profile-container {
@@ -485,7 +495,7 @@ footer > div > div > ul > li {
   padding-left: 0px;
   padding-right: 0px;
   position: absolute;
-  top: 154px;
+  top: 126px;
   left: 120.3px;
   height: 100% !important;
   min-height: 900px;
@@ -503,16 +513,16 @@ footer > div > div > ul > li {
 .notif-icn1 {
   background-color: #f9690c;
   border-radius: 50px;
-  width: 54px !important;
-  height: 54px;
-  padding: 15px;
+  width: 45px !important;
+  height: 45px;
+  padding: 10px;
 }
 .notif-icn2 {
   background-color: #ad7882;
   border-radius: 50px;
-  width: 54px !important;
-  height: 54px;
-  padding: 15px;
+  width: 45px !important;
+  height: 45px;
+  padding: 10px;
 }
 
 .notif-msg {
@@ -524,23 +534,24 @@ footer > div > div > ul > li {
 }
 
 .msgtxt {
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Source Sans Pro" !important ;
 }
 .msgdate {
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(166, 87, 130);
   text-align: right;
   font-family: "Source Sans Pro" !important ;
 }
 .msgtime {
-  font-size: 14px;
+  font-size: 13px;
   text-align: right;
   font-family: "Source Sans Pro" !important ;
 }
 
 .notif-header {
-  padding-top: 27px;
+  /* padding-top: 20px; */
+  padding-top: 15px !important;
   padding-left: 30px;
   color: rgb(166, 87, 130);
   font-size: 18px;
@@ -578,4 +589,16 @@ footer > div > div > ul > li {
   border-right: 15px solid transparent;
   border-left: 15px solid transparent;
   border-bottom: 15px solid white;
+}
+.overlay {
+  /* position: fixed;
+  display: none; */
+  /* width: 100%;
+  height: 100%; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }

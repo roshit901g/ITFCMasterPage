@@ -735,16 +735,14 @@ tbody.collapse.in {
 }
 .container > .navbar-header,
 .container-fluid > .navbar-header,
-.container > .navbar-collapse,
-.container-fluid > .navbar-collapse {
+.container > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
-  .container > .navbar-collapse,
-  .container-fluid > .navbar-collapse {
+  .container > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
@@ -752,7 +750,7 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  height: 50px;
+  height: 10px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
