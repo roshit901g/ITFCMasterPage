@@ -21,42 +21,7 @@
   <style>
   
     /* Remove the navbar's default margin-bottom and rounded borders */
-    .overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color:white;
-  /* background-color:white; */
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.overlay-content {
-  position: relative;
-  top: 10%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.overlay a {
-  text-decoration: none;
-} 
-
-.overlay a:hover, .overlay a:focus {
-  color:black !important;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  color: rgb(166, 87, 130);;
-      top: 0px;
-    right: 19px;
-    font-size: 46px;
-}
+    
 
   </style>
 
@@ -66,68 +31,71 @@
   <div class="topline"></div>
   <div class="navbar navbar-inverse">
     <div class="row container-fluid">
-      
-      
-
-
-      <div class="navbar-header" >
-        <button id="sidecollapse" class=" collapsebtn navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent1"
-          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation" onclick="sidecollapsefn()">
+  
+      <div class="navbar-header">
+        <button id="sidecollapse" class=" collapsebtn navbar-toggler" data-toggle="collapse"
+          data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+          aria-label="Toggle navigation" onclick="sidecollapsefn()">
           <!-- <i class="fa fa-bars"></i> -->
           <img id="snav" class="navicon" src="./icons/menu.svg" onclick="changesnavicn()">
         </button>
-        <a class="navbar-brand" href="#"><div id=Mainlogo><img src="./ITFC-Logo@2x.png" style="width: 100%; height: 100%;"></div></a>
+        <a class="navbar-brand" href="#">
+          <div id=Mainlogo><img src="./ITFC-Logo@2x.png" style="width: 100%; height: 100%;"></div>
+        </a>
       </div>
-      
+  
       <div class="navbar-cards ">
-        
+  
         <ul class="nav navbar-nav navbar-right">
           <li>
             <button onclick="openNav()" class="collapsebtn">
               <!-- <i class="fa fa-bars"></i> -->
-              <img  class="navicon" src="./icons/grid.svg" style="padding-top: 10px; margin-right: -9px;">
+              <img class="navicon" src="./icons/grid.svg" style="padding-top: 10px; margin-right: -9px;">
             </button>
           </li>
           <!-- <li>
-            <div id="dwork" class="digwork-active" onclick="toggleactive()">
-              <center>Digital WorkSpace</center>
+              <div id="dwork" class="digwork-active" onclick="toggleactive()">
+                <center>Digital WorkSpace</center>
+              </div>
+            </li> -->
+          <li id="navsearch" style="display: none;">
+            <div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon"
+                onclick="dispsearchicn()" src="icons/search.svg">
             </div>
-          </li> -->
-          <li id="navsearch" style="display: none;"><div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon" onclick="dispsearchicn()" src="icons/search.svg">
-          </div></li>
+          </li>
           <li id="navsearchicn"><a href="#"><img class="navicon" onclick="dispsearch()" src="icons/search.svg"></a></li>
           <li onclick="displaynotif()"><a href="#"><img class="navicon" src="icons/bell.svg"></a>
-
+  
             <div id="notif" class="card notifcard arrow-top" style="display: none;">
               <div class="row">
                 <div class="col-lg-8 notif-header">
                   Notifications
-                  
+  
                 </div>
                 <div class="col-lg-3 notif-usericn">
                   <div style="background-color: blueviolet;
-                                            border-radius: 50px;
-                                            width: 34px !important;
-                                            height: 34px;
-                                            margin: 10%;
-                                            margin-left: 63px;"></div>
+                                              border-radius: 50px;
+                                              width: 34px !important;
+                                              height: 34px;
+                                              margin: 10%;
+                                              margin-left: 63px;"></div>
                 </div>
-            
-            
+  
+  
               </div>
               <hr style="margin-left: 20px; margin-right: 20px; margin-top: 0px; margin-bottom: 0px;">
               <!-- one message -->
               <div>
-              <div class="row notif-msg ">
-                <div class="col-lg-1 notif-icn1" ><img src="./iconwhite/calendar.svg"> 
+                <div class="row notif-msg ">
+                  <div class="col-lg-1 notif-icn1"><img src="./iconwhite/calendar.svg">
+                  </div>
+                  <div class="col-lg-8 msgtxt">Leave request form Mohamed Elyas is pending for approval</div>
+                  <div class="col-lg-2" style="float: right; padding-right: 0px;padding-left: 0px; width: 21%;">
+                    <div class="msgdate">July 13, 2020</div>
+                    <div class="msgtime">3:00 PM</div>
+                  </div>
                 </div>
-                <div class="col-lg-8 msgtxt">Leave request form Mohamed Elyas is pending for approval</div>
-                <div class="col-lg-2" style="float: right; padding-right: 0px;padding-left: 0px; width: 21%;">
-                  <div class="msgdate">July 13, 2020</div>
-                  <div class="msgtime">3:00 PM</div>
-                </div>
-              </div>
-              <hr style="margin-left: 20px; margin-right: 20px; margin-top: 17px; margin-bottom: 0px;">
+                <hr style="margin-left: 20px; margin-right: 20px; margin-top: 17px; margin-bottom: 0px;">
               </div>
               <!-- one message end -->
               <div>
@@ -142,20 +110,22 @@
                 </div>
                 <hr style="margin-left: 20px; margin-right: 20px; margin-top: 17px; margin-bottom: 0px;">
               </div>
-              
-                    
-
+  
+  
+  
               <div class="notif-container">
-                
-                <div class="row"><center><a>view all</a></center></div>
+  
+                <div class="row">
+                  <center><a>view all</a></center>
                 </div>
+              </div>
             </div>
-          
+  
           </li>
           <li onclick="displayinfo()"><a href="#"><img class="userimg" src="./User-profile-pic@2x.png"
                 class="rounded-circle " alt="avatar image">
             </a>
-          
+  
             <div id="inf" class="card profilecard arrow-top1" style="display: none;">
               <div class="row">
                 <div class="col-lg-4">
@@ -165,133 +135,144 @@
                   <div class="username">Abdhul ansar</div>
                   <div class="userdesig">Sharepoint developer</div>
                 </div>
-
+  
               </div>
               <div class="profile-container">
                 <hr class="notifhr">
-                <div class="username-sub"><div><span><i class="material-icons" style="color:#AD7882">assignment_ind</i></span>abdhulansar@itfc-idb.org<span></span></div></div>
+                <div class="username-sub">
+                  <div><span><i class="material-icons"
+                        style="color:#AD7882">assignment_ind</i></span>abdhulansar@itfc-idb.org<span></span></div>
+                </div>
                 <hr class="notifhr">
-                <div class="username-sub" ><img class="profileicons" src="./iconwhite/bar-chart-2.svg" >D&OE</div>
+                <div class="username-sub"><img class="profileicons" src="./iconwhite/bar-chart-2.svg">D&OE</div>
                 <hr class="notifhr">
-                <div class="username-sub"><img class="profileicons" src="./iconwhite/settings.svg" style="padding: 4px;">User Settings</div>
+                <div class="username-sub"><img class="profileicons" src="./iconwhite/settings.svg"
+                    style="padding: 4px;">User Settings</div>
                 <hr class="notifhr">
-                <div class=""><center><button class="btn-signoff">Sign off</button></center></div>
-                
+                <div class="">
+                  <center><button class="btn-signoff">Sign off</button></center>
+                </div>
+  
               </div>
             </div>
-          
+  
           </li>
         </ul>
       </div>
-      <div class= " navbar-collapse collapse " id="navbarSupportedContent">
-      <ul class="nav main-menu navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Digital Workspace</a></li>
-        
-      
-      </ul>
+      <div class=" navbar-collapse collapse " id="navbarSupportedContent">
+        <ul class="nav main-menu navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i
+                class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </li>
+  
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i
+                class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </li>
+  
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i
+                class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i
+                class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Digital Workspace</a></li>
+        </ul>
       </div>
-       
+  
     </div>
   </div>
-
+  
   <div class="container-fluid text-center ">
     <div class="row">
       <div class="col-lg-1 sidenav navbar-collapse collapse " id="navbarSupportedContent1" style=" min-height: 900px; ">
         <ul style="list-style-type:none; text-align:left; padding: 0px;">
           <li id="l1"><a href="#">
               <center>
-                <div class="iconcontainer" id="side-icon1" > <img id="icon1" class="iconimg" src="icons/command.svg"> </div>
-              Dashboard
+                <div class="iconcontainer" id="side-icon1"> <img id="icon1" class="iconimg" src="icons/command.svg">
+                </div>
+                Dashboard
               </center>
             </a></li>
           <li id="l2" onclick="dispES()"><a href="#">
               <center>
-                <div class="iconcontainer" id="side-icon2" ><img id="icon2" class="iconimg esClass" src="icons/file-text.svg"> </div>
+                <div class="iconcontainer" id="side-icon2"><img id="icon2" class="iconimg esClass"
+                    src="icons/file-text.svg"> </div>
                 eServices
               </center>
             </a>
-
-              <div class="col-lg-2" id="eservices_submenu">
-              
-                <div class="sidenav-search"> <input type=text class="inputsearch" placeholder="Search"> <i class="fa fa-search "
-                    style="color: rgb(172,172,172);"></i>
-                </div>
-                <ul style="list-style-type:none; text-align:left; padding: 0px;">
-                  <li>
-              
-                    Document Capture
-              
-                  </li>
-                  <li>
-              
-                    Communication Workflow
-              
-                  </li>
-                  <li>
-              
-                    RightFax
-              
-                  </li>
-                  <li>
-              
-                    Digital Contract
-              
-                  </li>
-                  <li>
-              
-                    Digital Contract
-              
-                  </li>
-                  <li>
-              
-                    Procurement Request
-              
-                  </li>
-                </ul>
+  
+            <div class="col-lg-2" id="eservices_submenu">
+  
+              <div class="sidenav-search"> <input type=text class="inputsearch" placeholder="Search"> <i
+                  class="fa fa-search " style="color: rgb(172,172,172);"></i>
               </div>
-            
+              <ul style="list-style-type:none; text-align:left; padding: 0px;">
+                <li>
+  
+                  Document Capture
+  
+                </li>
+                <li>
+  
+                  Communication Workflow
+  
+                </li>
+                <li>
+  
+                  RightFax
+  
+                </li>
+                <li>
+  
+                  Digital Contract
+  
+                </li>
+                <li>
+  
+                  Digital Contract
+  
+                </li>
+                <li>
+  
+                  Procurement Request
+  
+                </li>
+              </ul>
+            </div>
+  
           </li>
           <li id="l3"><a href="#">
               <center>
-                <div class="iconcontainer" id="side-icon3"> <img id="icon3" class="iconimg" src="icons/archive.svg" style="color: red;"> </div>
+                <div class="iconcontainer" id="side-icon3"> <img id="icon3" class="iconimg" src="icons/archive.svg"
+                    style="color: red;"> </div>
                 Correspondance
               </center>
             </a></li>
           <li id="l4"><a href="#">
               <center>
-                <div class="iconcontainer" id="side-icon4"> <img id="icon4" class="iconimg" src="icons/check-square.svg"> </div>Tasks
+                <div class="iconcontainer" id="side-icon4"> <img id="icon4" class="iconimg" src="icons/check-square.svg">
+                </div>Tasks
               </center>
             </a></li>
           <li id="l5"><a href="#">
@@ -306,10 +287,10 @@
                 Documents
               </center>
             </a></li>
-
+  
         </ul>
-
-
+  
+  
       </div>
       <div class="col-lg-11 text-left content" style="position: inherit; min-height: 900px;">
         <h1>Welcome</h1>
@@ -322,70 +303,66 @@
         <h3>Test</h3>
         <p>Lorem ipsum...</p>
       </div>
-
+  
     </div>
-
+  
+  
     
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <div><center>
-        <div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon"
-            onclick="dispsearchicn()" src="icons/search.svg">
-        </div>
+  </div>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <div>
+        <center>
+          <div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon"
+              onclick="dispsearchicn()" src="icons/search.svg">
+          </div>
         </center>
-        </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i
-                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i
-                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i
-                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-              </ul>
-            </li>
-        
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i
-                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-              </ul>
-            </li>
-            <li ><a href="#">Digital Workspace</a></li>
-        
-        
-          </ul>
-        </div>
-        </div>
       </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i
+              class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i
+              class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i
+              class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i
+              class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Digital Workspace</a></li>
+
+
+      </ul>
     </div>
   </div>
-
-
-
-
-
+   
   <footer class="container-fluid text-center" style="padding-bottom: 0px; display: block;">
     <div class="row">
       <div class="col-lg-3 fcol " style="margin-left: 130px; width: 22%;">
