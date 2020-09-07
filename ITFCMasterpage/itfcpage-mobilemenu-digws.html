@@ -33,12 +33,12 @@
     <div class="row container-fluid">
   
       <div class="navbar-header">
-        <button id="sidecollapse" class=" collapsebtn navbar-toggler" data-toggle="collapse"
+        <a href="#"  class=" collapsebtn " data-toggle="collapse"
           data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
           aria-label="Toggle navigation" onclick="sidecollapsefn()">
           <!-- <i class="fa fa-bars"></i> -->
           <img id="snav" class="navicon" src="./icons/menu.svg" onclick="changesnavicn()">
-        </button>
+      </a>
         <a class="navbar-brand" href="#">
           <div id=Mainlogo><img src="./ITFC-Logo@2x.png" style="width: 100%; height: 100%;"></div>
         </a>
@@ -48,16 +48,10 @@
   
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <button onclick="openNav()" class="collapsebtn">
-              <!-- <i class="fa fa-bars"></i> -->
-              <img class="navicon" src="./icons/grid.svg" style="padding-top: 10px; margin-right: -9px;">
-            </button>
+            <a href="#" onclick="openNav()" class="collapsebtn">
+              <img class="navicon" src="./icons/grid.svg">
+            </a>
           </li>
-          <!-- <li>
-              <div id="dwork" class="digwork-active" onclick="toggleactive()">
-                <center>Digital WorkSpace</center>
-              </div>
-            </li> -->
           <li id="navsearch" style="display: none;">
             <div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon"
                 onclick="dispsearchicn()" src="icons/search.svg">
@@ -319,7 +313,7 @@
           </div>
         </center>
       </div>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav  main-menu navbar-right">
         <li><a href="#">Home</a></li>
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i
               class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>

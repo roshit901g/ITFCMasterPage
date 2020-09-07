@@ -297,17 +297,11 @@ footer > div > div > ul > li {
 .collapsebtn {
   border: none;
   outline: none;
-  display: none;
+  display: none !important;
   background: #f5f5f5;
 }
 
 @media (max-width: 768px) {
-  .navbar-inverse .main-menu > li > a:hover,
-  .navbar-inverse .main-menu > li > a:active {
-    color: rgb(166, 87, 130) !important;
-    border: solid rgb(166, 87, 130) !important;
-    border-radius: 28px !important;
-  }
   .collapsebtn {
     display: block !important;
     margin-left: 20px;
@@ -442,6 +436,21 @@ footer > div > div > ul > li {
     display: none;
   }
 }
+
+@media screen and (max-width: 1037px) and (min-width: 769px) {
+  #navbarSupportedContent {
+    display: none !important;
+  }
+  .collapsebtn {
+    display: block !important;
+    /* margin-left: 20px; */
+  }
+  #Mainlogo {
+    margin-top: -55px;
+    margin-left: 26px;
+  }
+}
+
 #navsearchicn {
   margin-left: 12px;
 }
