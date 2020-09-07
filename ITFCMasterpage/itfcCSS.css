@@ -143,9 +143,21 @@ footer > div > div > ul > li {
   padding-right: 17px !important;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover,
+/* .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:active {
   color: rgb(166, 87, 130) !important;
+} */
+
+.navbar-inverse .main-menu > li > a:hover,
+.navbar-inverse .main-menu > li > a:active {
+  color: rgb(166, 87, 130);
+  border: solid rgb(166, 87, 130);
+  border-radius: 28px !important;
+}
+.mainmenu-active {
+  color: white !important;
+  background-color: rgb(166, 87, 130) !important ;
+  border-radius: 28px;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -286,6 +298,12 @@ footer > div > div > ul > li {
 }
 
 @media (max-width: 768px) {
+  .navbar-inverse .main-menu > li > a:hover,
+  .navbar-inverse .main-menu > li > a:active {
+    color: rgb(166, 87, 130) !important;
+    border: solid rgb(166, 87, 130) !important;
+    border-radius: 28px !important;
+  }
   .collapsebtn {
     display: block !important;
     margin-left: 20px;
@@ -332,9 +350,16 @@ footer > div > div > ul > li {
     height: 52px;
     padding-right: 17px;
   }
+  .navbar-nav .open .dropdown-menu > li > a {
+    text-align: center;
+  }
   .navbar-inverse .navbar-nav > li > a {
     padding-right: 0px !important;
     padding-left: 21px;
+  }
+  .navbar-nav > li > a {
+    text-align: center;
+    color: black;
   }
   .navicon {
     width: 18px;
@@ -409,6 +434,12 @@ footer > div > div > ul > li {
   .profilecard {
     top: 71px !important;
   }
+  #navsearchicn {
+    display: none;
+  }
+}
+#navsearchicn {
+  margin-left: 12px;
 }
 .profilecircle {
   background-color: blueviolet;

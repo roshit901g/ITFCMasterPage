@@ -19,8 +19,44 @@
 
 
   <style>
+  
     /* Remove the navbar's default margin-bottom and rounded borders */
+    .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:white;
+  /* background-color:white; */
+  overflow-x: hidden;
+  transition: 0.5s;
+}
 
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  text-decoration: none;
+} 
+
+.overlay a:hover, .overlay a:focus {
+  color:black !important;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: rgb(166, 87, 130);;
+      top: 0px;
+    right: 19px;
+    font-size: 46px;
+}
 
   </style>
 
@@ -34,7 +70,7 @@
       
 
 
-      <div class="navbar-header col-lg" >
+      <div class="navbar-header" >
         <button id="sidecollapse" class=" collapsebtn navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent1"
           aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation" onclick="sidecollapsefn()">
           <!-- <i class="fa fa-bars"></i> -->
@@ -43,20 +79,20 @@
         <a class="navbar-brand" href="#"><div id=Mainlogo><img src="./ITFC-Logo@2x.png" style="width: 100%; height: 100%;"></div></a>
       </div>
       
-      <div class="col-lg navbar-cards ">
+      <div class="navbar-cards ">
         
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <button id="navcollapse" class=" collapsebtn navbar-toggler" data-toggle="modal" data-target="#myModal">
+            <button onclick="openNav()" class="collapsebtn">
               <!-- <i class="fa fa-bars"></i> -->
               <img  class="navicon" src="./icons/grid.svg" style="padding-top: 10px; margin-right: -9px;">
             </button>
           </li>
-          <li>
+          <!-- <li>
             <div id="dwork" class="digwork-active" onclick="toggleactive()">
               <center>Digital WorkSpace</center>
             </div>
-          </li>
+          </li> -->
           <li id="navsearch" style="display: none;"><div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon" onclick="dispsearchicn()" src="icons/search.svg">
           </div></li>
           <li id="navsearchicn"><a href="#"><img class="navicon" onclick="dispsearch()" src="icons/search.svg"></a></li>
@@ -112,9 +148,7 @@
               <div class="notif-container">
                 
                 <div class="row"><center><a>view all</a></center></div>
-                <!-- <h4><b>John Doe</b></h4>
-                                  <p>Architect & Engineer</p> -->
-              </div>
+                </div>
             </div>
           
           </li>
@@ -142,16 +176,15 @@
                 <div class="username-sub"><img class="profileicons" src="./iconwhite/settings.svg" style="padding: 4px;">User Settings</div>
                 <hr class="notifhr">
                 <div class=""><center><button class="btn-signoff">Sign off</button></center></div>
-                <!-- <h4><b>John Doe</b></h4>
-                      <p>Architect & Engineer</p> -->
+                
               </div>
             </div>
           
           </li>
         </ul>
       </div>
-      <div class= "col-lg navbar-collapse collapse " id="navbarSupportedContent">
-      <ul class="nav navbar-nav navbar-right">
+      <div class= " navbar-collapse collapse " id="navbarSupportedContent">
+      <ul class="nav main-menu navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
           <ul class="dropdown-menu">
@@ -184,6 +217,7 @@
             <li><a href="#">Page 3</a></li>
           </ul>
         </li>
+        <li><a href="#">Digital Workspace</a></li>
         
       
       </ul>
@@ -291,69 +325,59 @@
 
     </div>
 
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
     
-        <!-- Modal content-->
-        <div class="modal-content">
-          
-            <img src="./icons/x.svg" data-dismiss="modal">
-          
-          <div class="modal-body">
-            <div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon"
-                onclick="dispsearchicn()" src="icons/search.svg">
-            </div>
-            <div>
-              <ul class="nav navbar-nav ">
-                <li><a href="#">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i
-                      class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                  </ul>
-                </li>
-            
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i
-                      class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                  </ul>
-                </li>
-            
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i
-                      class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                  </ul>
-                </li>
-            
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i
-                      class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                  </ul>
-                </li>
-            
-            
-              </ul>
-            </div>
-            <div class="digwork-active" onclick="toggleactive()">
-              <center>Digital WorkSpace</center>
-            </div>
-            
-            </div>
-          </div>
-          
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <div><center>
+        <div class="topnav-search"> <input type=text class="inputsearch" placeholder="Search"> <img class="navicon"
+            onclick="dispsearchicn()" src="icons/search.svg">
         </div>
-    
+        </center>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<i
+                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Feeds <i
+                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Initiative <i
+                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            </li>
+        
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Multimedia <i
+                  class="fa fa-chevron-down" style="font-size: 11px; margin-left: 9px;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            </li>
+            <li ><a href="#">Digital Workspace</a></li>
+        
+        
+          </ul>
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -556,9 +580,23 @@
         $(".content").toggleClass("contentfloat");
         // $("#snav").attr("src","./icons/x.svg");
       }
+
 //       function changesnavicn(){
 //        $("#snav").attr("src", "./icons/menu.svg"); 
 //       }
-// </script>
+
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  $(document).on('click', '.main-menu  li  a', function () {
+      $(".main-menu  li  a").removeClass("mainmenu-active");
+      $(this).addClass("mainmenu-active");
+    });
+</script>
 
 </html>
