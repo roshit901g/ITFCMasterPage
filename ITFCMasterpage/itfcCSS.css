@@ -55,10 +55,10 @@ footer {
   text-align: center;
 }
 
-footer > div > div > ul {
+/* footer > div > div > ul {
   margin-right: 108px;
   padding: 0px;
-}
+} */
 
 footer > div > div > ul > li {
   font-size: 14px;
@@ -300,8 +300,21 @@ footer > div > div > ul > li {
   display: none !important;
   background: #f5f5f5;
 }
+.footer-body {
+  padding-left: 130px;
+}
+.footer-list {
+  list-style-type: none;
+  text-align: left;
+}
 
 @media (max-width: 768px) {
+  .footer-body {
+    padding-left: 0px;
+  }
+  .footer-list {
+    text-align: center;
+  }
   .collapsebtn {
     display: block !important;
     margin-left: 20px;
@@ -309,22 +322,22 @@ footer > div > div > ul > li {
   .topline {
     height: 6px;
   }
-  .fcol {
+  /* .fcol {
     margin-left: 110px !important;
     width: 77% !important;
-  }
+  } */
   #dwork {
     display: none;
   }
   .navbar {
-    height: 106px;
-    padding: 40px;
+    /* height: 106px; */
+    padding: 35px;
     padding-left: 0px;
     padding-right: 0px;
   }
   #Mainlogo {
-    margin-top: -64px;
-    margin-left: 42px;
+    margin-top: -36px;
+    margin-left: 16px;
     height: 71px;
     width: 73px;
   }
@@ -357,7 +370,7 @@ footer > div > div > ul > li {
   }
   .navbar-nav > li > a {
     text-align: center;
-    color: black;
+    color: white;
   }
   .navicon {
     width: 18px;
@@ -437,7 +450,13 @@ footer > div > div > ul > li {
   }
 }
 
-@media screen and (max-width: 1037px) and (min-width: 769px) {
+@media screen and (max-width: 1039px) and (min-width: 769px) {
+  .footer-body {
+    padding-left: 0px;
+  }
+  .footer-list {
+    text-align: center;
+  }
   #navbarSupportedContent {
     display: none !important;
   }
@@ -445,10 +464,10 @@ footer > div > div > ul > li {
     display: block !important;
     /* margin-left: 20px; */
   }
-  #Mainlogo {
+  /* #Mainlogo {
     margin-top: -55px;
     margin-left: 26px;
-  }
+  } */
 }
 
 #navsearchicn {
@@ -479,29 +498,29 @@ footer > div > div > ul > li {
   background: white;
 }
 .profilecard {
-  height: 350px;
-  width: 339px;
+  height: fit-content;
+  width: 269px;
   top: 79px;
   right: 0px;
   border-radius: 6px;
 }
 .username {
   color: #000000cc;
-  font-size: 18px;
+  font-size: 14px;
   padding-top: 27px;
   font-family: "Source Sans Pro" !important;
   font-weight: 600;
 }
 .username-sub {
   color: #000000cc;
-  font-size: 18px;
+  font-size: 14px;
   padding-top: 0px;
   padding-left: 35.5px;
   font-family: "Source Sans Pro" !important;
   font-weight: 600;
 }
 .userdesig {
-  font-size: 16px;
+  font-size: 13px;
   color: #00000099;
   font-family: "Source Sans Pro" !important;
 }
@@ -525,7 +544,7 @@ footer > div > div > ul > li {
 }
 .profile-container {
   padding: 2px 16px;
-  width: 339px;
+  /* width: fit-content; */
   padding-left: 18.5px;
   padding-right: 18.5px;
 }
@@ -539,7 +558,7 @@ footer > div > div > ul > li {
   padding-left: 0px;
   padding-right: 0px;
   position: absolute;
-  top: 126px;
+  top: 109px;
   left: 120.3px;
   height: 100% !important;
   min-height: 900px;
@@ -551,8 +570,8 @@ footer > div > div > ul > li {
   width: 245px;
 }
 .notifhr {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .notif-icn1 {
   background-color: #f9690c;
@@ -607,6 +626,10 @@ footer > div > div > ul > li {
   background-color: #b37094;
   color: white;
   border: none;
+  margin-bottom: 12px;
+}
+.f-left {
+  float: left;
 }
 .inputsearch {
   border: white;
@@ -644,13 +667,13 @@ footer > div > div > ul > li {
   z-index: 2;
 } */
 .overlay {
-  height: 100%;
-  width: 0;
+  height: 0;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: rgb(166, 87, 130);
   /* background-color:white; */
   overflow-x: hidden;
   transition: 0.5s;
@@ -675,7 +698,7 @@ footer > div > div > ul > li {
 
 .overlay .closebtn {
   position: absolute;
-  color: rgb(166, 87, 130);
+  color: white;
   top: 0px;
   right: 19px;
   font-size: 46px;
