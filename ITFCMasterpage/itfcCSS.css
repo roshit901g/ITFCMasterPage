@@ -376,6 +376,7 @@ footer > div > div > ul > li {
     text-align: center;
     color: white;
     width: fit-content;
+    font-size: 22px;
   }
   .nav .open .dropdown-menu {
     position: static;
@@ -387,9 +388,9 @@ footer > div > div > ul > li {
     color: white;
   }
 
-  .navicon {
+  /* .navicon {
     width: 18px;
-  }
+  } */
   .row {
     margin-right: 0px;
   }
@@ -493,13 +494,14 @@ footer > div > div > ul > li {
     display: block !important;
     /* margin-left: 20px; */
   }
-  .navicon {
+  /* .navicon {
     width: 18px;
-  }
+  } */
   .nav > li > a {
     text-align: center;
     color: white;
     width: fit-content;
+    font-size: 20px;
   }
   .nav .open .dropdown-menu {
     position: static;
@@ -561,7 +563,7 @@ footer > div > div > ul > li {
   color: #000000cc;
   font-size: 14px;
   padding-top: 0px;
-  padding-left: 35.5px;
+  padding-left: 20px;
   font-family: "Source Sans Pro" !important;
   font-weight: 600;
 }
