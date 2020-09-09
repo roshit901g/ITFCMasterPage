@@ -79,7 +79,7 @@ footer > div > div > ul > li {
   margin-bottom: -33px;
   border-radius: 50%;
   /* height: 76px; */
-  height: 65px;
+  height: 50px;
 }
 
 #Mainlogo {
@@ -284,7 +284,7 @@ footer > div > div > ul > li {
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .sidenav {
     height: auto;
     padding: 15px !important;
@@ -372,6 +372,21 @@ footer > div > div > ul > li {
     text-align: center;
     color: white;
   }
+  .nav > li > a {
+    text-align: center;
+    color: white;
+    width: fit-content;
+  }
+  .nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    text-align: center;
+    background: none;
+    border: 0px;
+    box-shadow: 0 0 black;
+    color: white;
+  }
+
   .navicon {
     width: 18px;
   }
@@ -449,13 +464,27 @@ footer > div > div > ul > li {
     display: none;
   }
 }
+.notif-usericn {
+  float: right;
+  margin-right: 37px;
+}
 
-@media screen and (max-width: 1039px) and (min-width: 769px) {
+@media screen and (max-width: 1039px) and (min-width: 768px) {
   .footer-body {
     padding-left: 0px;
   }
+  .navbar-nav > li > a {
+    text-align: center;
+    color: white;
+  }
   .footer-list {
     text-align: center;
+  }
+  #mv-search {
+    display: none !important;
+  }
+  #navsearchicn {
+    margin-left: 0px !important;
   }
   #navbarSupportedContent {
     display: none !important;
@@ -463,6 +492,23 @@ footer > div > div > ul > li {
   .collapsebtn {
     display: block !important;
     /* margin-left: 20px; */
+  }
+  .navicon {
+    width: 18px;
+  }
+  .nav > li > a {
+    text-align: center;
+    color: white;
+    width: fit-content;
+  }
+  .nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    text-align: center;
+    background: none;
+    border: 0px;
+    box-shadow: 0 0 black;
+    color: white;
   }
   /* #Mainlogo {
     margin-top: -55px;
@@ -576,16 +622,22 @@ footer > div > div > ul > li {
 .notif-icn1 {
   background-color: #f9690c;
   border-radius: 50px;
-  width: 45px !important;
-  height: 45px;
-  padding: 10px;
+  width: 32px !important;
+  height: 32px;
+  padding: 5px;
+  padding-top: 3px;
+  padding-left: 4px;
+  float: left;
 }
 .notif-icn2 {
   background-color: #ad7882;
   border-radius: 50px;
-  width: 45px !important;
-  height: 45px;
-  padding: 10px;
+  width: 32px !important;
+  height: 32px;
+  padding: 5px;
+  padding-top: 3px;
+  padding-left: 4px;
+  float: left;
 }
 
 .notif-msg {
@@ -599,6 +651,11 @@ footer > div > div > ul > li {
 .msgtxt {
   font-size: 14px;
   font-family: "Source Sans Pro" !important ;
+  font-size: 14px;
+  font-family: "Source Sans Pro" !important;
+  float: left;
+  width: 60%;
+  margin-left: 13px;
 }
 .msgdate {
   font-size: 14px;
@@ -619,6 +676,7 @@ footer > div > div > ul > li {
   color: rgb(166, 87, 130);
   font-size: 18px;
   font-family: "Source Sans Pro" !important ;
+  float: left;
 }
 .btn-signoff {
   width: 119px;
@@ -685,17 +743,27 @@ footer > div > div > ul > li {
   width: 100%;
   text-align: center;
   margin-top: 30px;
+  text-align: -webkit-center;
 }
 
 .overlay a {
   text-decoration: none;
 }
 
-.overlay a:hover,
-.overlay a:focus {
-  color: black !important;
+.overlay-content > ul > li > a:hover,
+.overlay-content > ul > li > a:focus {
+  color: white !important;
+  background-color: rgb(166, 87, 130) !important;
+  border: 1px solid white !important;
+  border-radius: 20px;
 }
-
+.overlay-content > ul > li > ul > li a:hover,
+.overlay-content > ul > li > ul > li a:focus {
+  color: white !important;
+  background-color: rgb(166, 87, 130) !important;
+  /* border: 1px solid white !important;
+  border-radius: 20px; */
+}
 .overlay .closebtn {
   position: absolute;
   color: white;
