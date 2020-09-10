@@ -2,15 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 
 .navbar {
-  /* height: 142px; original */
   height: 100px;
   margin-bottom: 0;
   border-radius: 0;
   background-color: rgb(245, 245, 245);
   border-color: rgb(245, 245, 245);
   padding: 23px;
-  /* padding-left: 30px;
-  padding-top: 40px; */
+
   box-shadow: 0px 3px 4px #00000029;
 }
 
@@ -18,22 +16,11 @@ body {
   background-color: rgb(255, 243, 251);
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {
   height: 700px;
   min-height: 100%;
 }
 
-/* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: rgb(255, 255, 255);
-  height: 100%;
-  position: inherit;
-  box-shadow: 0px 3px 12px #00000029;
-}
-
-/* Set black background color, white text and some padding */
 footer {
   background-color: rgb(26, 26, 26);
   color: white;
@@ -45,30 +32,60 @@ footer {
   bottom: 0;
 }
 
-.iblack {
-  color: black;
-}
-
 .footer1 {
   background-color: rgb(0, 0, 0);
   padding: 15px;
   text-align: center;
 }
 
-/* footer > div > div > ul {
-  margin-right: 108px;
-  padding: 0px;
-} */
-
 footer > div > div > ul > li {
   font-size: 14px;
   padding-bottom: 17px;
   font-family: "Source Sans Pro" !important;
 }
+.bottom-padding-nil {
+  padding-bottom: 0px;
+}
 .footerHeadings {
   font-family: "Oswald" !important;
   margin-bottom: 25px;
   font-size: 21px;
+}
+.icndropdown {
+  font-size: 11px;
+  margin-left: 9px;
+}
+
+.notif-usericn-round {
+  background-color: blueviolet;
+  border-radius: 50px;
+  width: 34px !important;
+  height: 34px;
+  margin: 10%;
+  margin-left: 63px;
+}
+
+.notif-hr {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.f-right {
+  float: right;
+}
+
+#navsearch {
+  display: none;
+}
+
+#notif {
+  display: none;
+}
+
+#inf {
+  display: none;
 }
 .iconbrand {
   padding-right: 13px;
@@ -83,44 +100,9 @@ footer > div > div > ul > li {
 }
 
 #Mainlogo {
-  /* margin-top: -35px;
-
-  width: 100px;
-  height: 97px; */
   margin-top: -31px;
   width: 85px;
   height: 85px;
-}
-
-.digwork-active {
-  color: white;
-  background-color: rgb(166, 87, 130);
-  padding: 13px;
-  /* margin: 11px;
-  margin-top: 0px; */
-  border-radius: 28px;
-  width: 199px;
-  height: 45px;
-  min-width: fit-content;
-  font-size: 0.9rem;
-  text-align: center;
-  margin-left: 27px;
-}
-
-.digwork {
-  color: rgb(166, 87, 130);
-  border: solid rgb(166, 87, 130);
-  background-color: white !important;
-  padding: 11px;
-  /* margin: 11px;
-  margin-top: 0px; */
-  /* border-radius: 28px;
-  width: 199px;
-  height: 51px;
-  min-width: fit-content;
-  font-size: 0.9rem;
-  text-align: center;
-  margin-left: 27px; */
 }
 
 .userinfo {
@@ -143,12 +125,8 @@ footer > div > div > ul > li {
   padding-right: 17px !important;
 }
 
-/* .navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:active {
-  color: rgb(166, 87, 130) !important;
-} */
-
-.navbar-inverse .main-menu > li > a:hover {
+.navbar-inverse .main-menu > li > a:hover,
+.navbar-inverse .main-menu > li > a:focus {
   color: rgb(166, 87, 130);
 }
 
@@ -161,7 +139,8 @@ footer > div > div > ul > li {
 .mainmenu-active {
   color: white !important;
   background-color: rgb(166, 87, 130) !important ;
-  border-radius: 28px;
+  border-radius: 28px !important;
+  border: 2px solid white !important;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -171,25 +150,6 @@ footer > div > div > ul > li {
 .navbar-inverse .navbar-nav > .open > a:active {
   color: rgb(166, 87, 130);
   background-color: rgb(245, 245, 245);
-}
-
-.sidenav > ul > li > a {
-  color: rgb(166, 87, 130);
-  font-size: 14px;
-  font-family: "Source Sans Pro" !important;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.sidenav-search {
-  border: solid 1.5px rgb(172, 172, 172);
-  width: fit-content;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 3px;
-  background: white;
-  padding: 4px;
-  border-radius: 4px;
 }
 
 .topnav-search {
@@ -211,56 +171,9 @@ footer > div > div > ul > li {
 
   padding-top: 37px;
 }
-.bg-main {
-  background-color: rgb(166, 87, 130);
-  /* color: white; */
-}
-.bgmain {
-  background-color: rgb(166, 87, 130);
-  /* color: white; */
-}
+
 .iconimg {
   height: 30px;
-}
-
-.sidenav > ul > li {
-  margin-bottom: 20px;
-}
-/* #eservices_submenu {
-  display: none;
-  padding-left: 0px;
-  padding-right: 0px;
-  position: absolute;
-  top: 133px;
-  left: 120.3px;
-  height: 100% !important;
-  min-height: 900px;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 2px 5px 8px #c0c0c0;
-  color: rgb(166, 87, 130);
-  font-size: 14px;
-  font-family: sans-serif;
-} */
-
-#eservices_submenu > ul > li {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Source Sans Pro" !important;
-}
-#eservices_submenu > ul > li:hover {
-  background-color: rgb(166, 87, 130);
-  color: white !important;
-}
-#esvs:hover + #eservices_submenu {
-  display: block;
-}
-
-.classhover {
-  background-color: rgb(166, 87, 130);
-  color: white;
 }
 
 .topline {
@@ -285,11 +198,6 @@ footer > div > div > ul > li {
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px !important;
-  }
-
   .row.content {
     height: auto;
   }
@@ -322,13 +230,7 @@ footer > div > div > ul > li {
   .topline {
     height: 6px;
   }
-  /* .fcol {
-    margin-left: 110px !important;
-    width: 77% !important;
-  } */
-  #dwork {
-    display: none;
-  }
+
   .navbar {
     /* height: 106px; */
     padding: 35px;
@@ -341,10 +243,7 @@ footer > div > div > ul > li {
     height: 71px;
     width: 73px;
   }
-  .colflex {
-    flex: 20% !important;
-    width: 50%;
-  }
+
   .navbar-header {
     float: left;
   }
@@ -379,6 +278,7 @@ footer > div > div > ul > li {
     font-size: 22px;
   }
   .nav .open .dropdown-menu {
+    font-size: 17px;
     position: static;
     float: none;
     text-align: center;
@@ -399,25 +299,13 @@ footer > div > div > ul > li {
     padding-right: 0px;
     margin-left: 0px;
   }
-  .sidenav {
-    float: left !important;
-    padding-left: 8px;
-    margin-left: -130px;
-    width: 100px !important;
-    font-size: 12px;
-  }
-  .sidenav > ul > li > a {
-    font-size: 12px;
-  }
+
   .content {
     /* float: right; */
     width: 100%;
     height: fit-content;
   }
-  #eservices_submenu {
-    top: 112px !important;
-    left: 102.3px !important;
-  }
+
   #navbarSupportedContent {
     border: none;
     background: whitesmoke;
@@ -504,6 +392,7 @@ footer > div > div > ul > li {
     font-size: 20px;
   }
   .nav .open .dropdown-menu {
+    font-size: 17px;
     position: static;
     float: none;
     text-align: center;
@@ -529,11 +418,6 @@ footer > div > div > ul > li {
   margin: 9.5px;
   margin-top: 25px;
   margin-left: 39px;
-}
-
-.contentfloat {
-  float: right;
-  width: 82%;
 }
 
 .card {
@@ -601,22 +485,7 @@ footer > div > div > ul > li {
   border-radius: 3px;
   margin-right: 16.5px;
 }
-#eservices_submenu {
-  display: none;
-  padding-left: 0px;
-  padding-right: 0px;
-  position: absolute;
-  top: 109px;
-  left: 120.3px;
-  height: 100% !important;
-  min-height: 900px;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 2px 5px 8px #c0c0c0;
-  color: rgb(166, 87, 130);
-  font-size: 14px;
-  /* font-family: sans-serif; */
-  width: 245px;
-}
+
 .notifhr {
   margin-top: 12px;
   margin-bottom: 12px;
@@ -717,15 +586,7 @@ footer > div > div > ul > li {
   border-left: 15px solid transparent;
   border-bottom: 15px solid white;
 }
-/* .overlay {
 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-} */
 .overlay {
   height: 0;
   width: 100%;
@@ -756,8 +617,8 @@ footer > div > div > ul > li {
 .overlay-content > ul > li > a:focus {
   color: white !important;
   background-color: rgb(166, 87, 130) !important;
-  border: 1px solid white !important;
-  border-radius: 20px;
+  border: 2px solid white !important;
+  border-radius: 27px;
 }
 .overlay-content > ul > li > ul > li a:hover,
 .overlay-content > ul > li > ul > li a:focus {
